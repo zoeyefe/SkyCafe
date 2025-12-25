@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import '../styles/global.css';
+import './styles/global.css';
 import Header from './components/Header';
 import Footer from './components/Footer';
 
@@ -13,9 +13,6 @@ import AdminPanel from './pages/AdminPanel';
 import LoginPage from './pages/LoginPage';
 
 function App() {
-  const [isLoggedIn, setIsLoggedIn] = useState(false);
-  const [userRole, setUserRole] = useState(null); // 'admin', 'cafe_owner', 'customer'
-
   return (
     <Router>
       <div className="app">

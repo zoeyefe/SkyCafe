@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import '../styles/orders.css';
 
 function OrdersPage() {
-  const [orders, setOrders] = useState([
+  const [orders] = useState([
     {
       id: 1,
       user_id: 1,

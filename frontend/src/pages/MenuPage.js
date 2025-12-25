@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import '../styles/menu.css';
 
 function MenuPage() {
-  const [menus, setMenus] = useState([
+  const [menus] = useState([
     {
       id: 1,
       cafe_id: 1,

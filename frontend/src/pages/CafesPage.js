@@ -1,8 +1,8 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import '../styles/cafes.css';
 
 function CafesPage() {
-  const [cafes, setCafes] = useState([
+  const [cafes] = useState([
     {
       id: 1,
       name: 'Sky Café',
