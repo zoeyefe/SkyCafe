@@ -1,0 +1,181 @@
+/* Cafes Page Styles */
+
+.cafes-page h1 {
+  color: var(--primary-color);
+  margin-bottom: 0.5rem;
+}
+
+.cafes-page .subtitle {
+  color: #666;
+  margin-bottom: 2rem;
+  font-size: 1.1rem;
+}
+
+/* Search Section */
+.search-section {
+  margin-bottom: 2rem;
+  display: flex;
+  gap: 1rem;
+}
+
+.search-input {
+  flex: 1;
+  max-width: 400px;
+  padding: 0.75rem 1rem;
+  border: 2px solid var(--border-color);
+  border-radius: 6px;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+}
+
+.search-input:focus {
+  outline: none;
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 3px rgba(139, 69, 19, 0.1);
+}
+
+/* Cafes Grid */
+.cafes-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.cafe-card {
+  text-align: center;
+}
+
+.cafe-icon {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.cafe-card h2 {
+  color: var(--primary-color);
+  margin-bottom: 0.5rem;
+}
+
+.cafe-card .description {
+  color: #666;
+  font-size: 0.95rem;
+  margin-bottom: 1rem;
+  min-height: 2.5rem;
+}
+
+.cafe-rating {
+  color: var(--accent-color);
+  font-weight: bold;
+  margin: 0.5rem 0;
+}
+
+.cafe-rating span {
+  margin-left: 0.5rem;
+  color: #333;
+}
+
+.cafe-info {
+  text-align: left;
+  background-color: var(--light-bg);
+  padding: 1rem;
+  border-radius: 6px;
+  margin: 1rem 0;
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.cafe-info p {
+  margin: 0.3rem 0;
+}
+
+.cafe-card .btn {
+  width: 100%;
+}
+
+/* Modal */
+.modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1000;
+  max-width: 500px;
+  width: 90%;
+  max-height: 90vh;
+  overflow-y: auto;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+}
+
+.modal::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: -1;
+}
+
+.modal-content {
+  position: relative;
+}
+
+.close-btn {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: #666;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.close-btn:hover {
+  color: var(--primary-color);
+}
+
+.cafe-details h2 {
+  color: var(--primary-color);
+  margin-bottom: 1rem;
+}
+
+.details-info {
+  background-color: var(--light-bg);
+  padding: 1rem;
+  border-radius: 6px;
+  margin: 1rem 0;
+  text-align: left;
+}
+
+.details-info p {
+  margin: 0.5rem 0;
+  color: #666;
+}
+
+.cafe-details .btn {
+  width: 100%;
+  margin-top: 1rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .cafes-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .search-input {
+    max-width: 100%;
+  }
+
+  .modal {
+    width: 95%;
+    max-height: 80vh;
+  }
+}
